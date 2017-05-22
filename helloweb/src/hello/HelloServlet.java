@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  * 5. 구현한 Servlet class를 톰캣에 등록
  * 		=> 1. web.xml에 등록하는 방법
  * 		   2. Annotation을 이용해서 등록하는 방법(서블릿 3.0부터 - 톰캣7)
- */
+ */  
 public class HelloServlet extends HttpServlet{
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
