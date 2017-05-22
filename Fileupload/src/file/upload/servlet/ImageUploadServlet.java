@@ -21,7 +21,7 @@ import file.upload.vo.ImgUploadVO;
 public class ImageUploadServlet extends HttpServlet {
 	
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//이미지를 저장할 경로설정
 		ServletContext ctx = getServletContext();//context객체(- 현재 application의 정보를 가짐)를 가져옴
 	/*	String imageDir = ctx.getRealPath("/up_images");*/
