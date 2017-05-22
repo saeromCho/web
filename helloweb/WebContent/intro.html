@@ -1,0 +1,53 @@
+<!doctype html> <!--document파일을 작성했다는 의미. 누가 작성했는지 .. 그냥 적어주는듯-->
+
+<html> <!--HTML의 root태그-->
+	<head> <!-- 이 문서의 정보를 넣는 태그, 머릿말, 전체적인 설정..정도...?-->
+		<meta charset = "UTF-8"> <!--이 문서는 UTF-8방식으로 작성했어-->
+		<title>첫번째 html문서야</title>
+
+	</head>
+
+	<body><!--본격적인 내용을 넣음-->
+		<h1>소개</h1>
+	안녕하세용.<br><!--한줄 밑으로 가 --> <strong>조새롬입니다.</strong>
+		<h2>링&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;크</h2><!--&nbsp; : 공백표시-->
+		<!--목록태그 : ul => 순서가 없는 목록(불릿아이콘으로), ol => 순서가 있는 목록(숫자로)-->
+		<ol><!--하나로 묶겠다.-->
+			<li><a href = "http://www.naver.com">네이버</a></li><!--하나의 index에 담긴다고 보면되려나?//목록의 요소로 설정-->
+			<li><a href = "http://www.daum.net">다음</a></li><!--링크로 걸어주고 싶으면, 링크라는 걸 알려주려면. <a>, </a>로 해주면 됨, '다음'을 클릭하면 설정해준 url로 이동해라 라는 뜻-->
+			<li><a href = "http://www.google.co.kr">구글</a></li>
+			<li><a href = "http://info.cern.ch">CERN</a></li>
+			<li><a href = "http://127.0.0.1:8088/helloweb/hello">Hello Servlet요청</a></li>
+			<li><a href = "http://127.0.0.1:8088/helloweb/hello.jsp">hello.jsp요청</a></li>
+			<li><a href = "/helloweb/hello">Hello Servlet요청2</a></li>
+			<li><a href = "/helloweb/hello.jsp">hello.jsp요청2</a></li><!-- 위에 있는 http://127.0.0.1:8088을 생략했는데도 이동이 됨.(똥일한 결과) => 생략된 게 자동적으로 붙음-->
+			<li><a href = "/hello.jsp">hello.jsp요청3</a></li><!-- /로 시작했으니까 절대경로. 얘는 왜안될까. /helloweb도 반복되서 안적어준건데 => link는 루트디렉토리까지 포함해줘야 함-->
+			<li><a href = "./hello.jsp">hello.jsp요청4</a></li><!-- 상대경로로는 가능하네. -->
+		</ol>
+		<!-- 
+		이미 intro.html은  "http://127.0.0.1:8088/helloweb 내에 있음. 이미 거기까지 들어와져 있는 거임. 
+		따라서  '"http://127.0.0.1:8088/helloweb' 얘를 써주지 않아도 되고 바뀌는 부분만 써주면 되는 거임. 반복되는 애들을 뭐할라고 써줘.
+		써주지 않아도 다 아는 거임. 바뀌는 부분만 써줘도 된다.
+        -->
+		<font size = "6">하이</font>
+
+<4/27일 주문> --시작태그 : 루트태그
+	<주문><br>
+
+		<개수>20</개수><br>
+		<단가>400</단가><br>
+		<주문상품>i-200</주문상품><br>
+
+	</주문><br>
+	<주문><br>
+
+		<개수>20</개수><br>
+		<단가>400</단가><br>
+		<주문상품>i-200</주문상품><br>
+
+	</주문><br>
+</4/27일 주문><br>
+	</body>
+</html>
+
+www worldwide web

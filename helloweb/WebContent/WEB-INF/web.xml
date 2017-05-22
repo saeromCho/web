@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>helloweb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- servlet태그 : 서블릿 객체를 등록하는 태그 -->
+  <!--HelloServlet등록 => HelloServlet객체를 등록하는 것-->
+  <servlet>
+  	<servlet-name>hello</servlet-name>
+  	<servlet-class>hello.HelloServlet</servlet-class><!-- 거기 클래스에 있는 객체를 생성하는 거, 톰캣이 함. 이렇게 쓰는 게 톰캣에게 뭐 생성(어떤 객체)하라고 알려주는 거임 -->	
+  </servlet>										 <!-- hello = new hello.HelloServlet(); -->
+  
+  <!-- 서블릿 매핑 : 등록한 HelloServlet을 요청하는 URL등록 -->
+  <!-- 사용자(Web Browser)가 /hello URL로 요청하면 이름이 hello인 서블릿 객체가 일할 거다는 의미. -->
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name><!-- 밑의 url로 요청하면 hello라는 이름을 가진 servlet이 일을 할거다 의 의미임. -->
+  	<url-pattern>/hello</url-pattern><!-- url-pattern은 /로 시작. /는 Application Root경로임. -->
+  </servlet-mapping>
+</web-app>
+<!-- 
+앞에 꺼는 생략되고 /(= Application Root경로 or Root디렉토리)랑 servlet-name(서블릿이 있는 경로가 있으면 그거까지 포함)을 쓰면 됨. 
+http://127.0.0.1:8088/helloweb/hello => url-pattern에 있는 /hello는, helloweb뒤에 있는 /hello임
+					 /gretting/hello라면 helloweb/gretting/hello인 거임.
+xml파일은 앞에 루트경로를 생략하고 있음. 
+-->
